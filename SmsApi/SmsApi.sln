@@ -5,6 +5,10 @@ VisualStudioVersion = 15.0.27130.2027
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmsApi", "SmsApi\SmsApi.csproj", "{2306CD9F-DE6D-4C51-8A81-8B04F5F8CDC2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmsApi.Common", "SmsApi.Common\SmsApi.Common.csproj", "{104C8FFF-7F7F-42D1-9307-B25211750B3C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmsApi.Service", "SmsApi.Service\SmsApi.Service.csproj", "{EAC043AD-6141-42DB-9599-A2DA358E3BB6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{2306CD9F-DE6D-4C51-8A81-8B04F5F8CDC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2306CD9F-DE6D-4C51-8A81-8B04F5F8CDC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2306CD9F-DE6D-4C51-8A81-8B04F5F8CDC2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{104C8FFF-7F7F-42D1-9307-B25211750B3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{104C8FFF-7F7F-42D1-9307-B25211750B3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{104C8FFF-7F7F-42D1-9307-B25211750B3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{104C8FFF-7F7F-42D1-9307-B25211750B3C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EAC043AD-6141-42DB-9599-A2DA358E3BB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EAC043AD-6141-42DB-9599-A2DA358E3BB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EAC043AD-6141-42DB-9599-A2DA358E3BB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EAC043AD-6141-42DB-9599-A2DA358E3BB6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

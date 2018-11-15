@@ -15,11 +15,32 @@ namespace SmsApi
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
+        public Startup(IHostingEnvironment env)
         {
-            Configuration = configuration;
+            var environmentName = GetEnvironmentName(env.EnvironmentName);
+            var builder = new ConfigurationBuilder()
+                .SetBasePath(env.ContentRootPath)
+                .AddInMemoryCollection()
+                .AddJsonFile("appsettings.json", true, true)
+                .AddJsonFile($"appsettings.{environmentName}.json", true, true);
+            
+            if (env.IsEnvironment("Development"))
+            {
+                builder.AddApplicationInsightsSettings(true);
+            }
+            builder.AddEnvironmentVariables();
+
+            Configuration = builder.Build();
         }
 
+        private static string GetEnvironmentName(string environmentName)
+        {
+            var configuration = new ConfigurationBuilder()
+                .AddJsonFile("environment.json", true)
+                .Build();
+
+            return configuration["EnvironmentName"] ?? environmentName ?? string.Empty;
+        }
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
